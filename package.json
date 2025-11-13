@@ -2,7 +2,6 @@
   "name": "pokedec-basic",
   "main": "expo-router/entry",
   "version": "1.0.0",
-  
   "scripts": {
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
@@ -17,9 +16,11 @@
     "test:simple": "jest --testPathIgnorePatterns=\".*\" --testNamePattern=\"basic\" --verbose",
     "test:utils": "jest app/__tests__/utils/ --passWithNoTests",
     "test:debug": "node --inspect-brk node_modules/jest/bin/jest.js --runInBand --no-cache",
-    "type-check": "tsc --noEmit"
-  }
-,
+    "type-check": "tsc --noEmit",
+    "test:unit": "jest --config jest.unit.config.js --verbose",
+    "test:unit:watch": "jest --config jest.unit.config.js --watch",
+    "test:unit:coverage": "jest --config jest.unit.config.js --coverage"
+  },
   "dependencies": {
     "@expo/vector-icons": "^15.0.2",
     "@react-navigation/bottom-tabs": "^7.4.0",
@@ -52,11 +53,14 @@
     "react-native-worklets": "0.5.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
     "@testing-library/jest-native": "^5.4.3",
     "@testing-library/react-native": "^13.3.3",
     "@types/jest": "^30.0.0",
     "@types/lodash": "^4.17.20",
     "@types/react": "~19.1.0",
+    "babel-jest": "^30.2.0",
     "detox": "^20.45.1",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~10.0.0",

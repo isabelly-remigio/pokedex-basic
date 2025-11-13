@@ -13,5 +13,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-  ]
+, "app/src/utils/pokemonLogic.js", "app/__tests__/unit/pokemonLogic.test.js"  ]
 }
