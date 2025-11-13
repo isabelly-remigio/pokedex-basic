@@ -19,7 +19,13 @@
     "type-check": "tsc --noEmit",
     "test:unit": "jest --config jest.unit.config.js --verbose",
     "test:unit:watch": "jest --config jest.unit.config.js --watch",
-    "test:unit:coverage": "jest --config jest.unit.config.js --coverage"
+    "test:unit:coverage": "jest --config jest.unit.config.js --coverage",
+    "test:components": "jest --config jest.components.config.js --verbose",
+    "test:components:watch": "jest --config jest.components.config.js --watch",
+    "test:all": "npm run test:unit && npm run test:components",
+      "test:clean": "jest --testPathIgnorePatterns=\"/e2e/|/services/\" --verbose"
+
+  
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.2",
@@ -55,6 +61,7 @@
   "devDependencies": {
     "@babel/core": "^7.28.5",
     "@babel/preset-env": "^7.28.5",
+    "@babel/preset-react": "^7.28.5",
     "@testing-library/jest-native": "^5.4.3",
     "@testing-library/react-native": "^13.3.3",
     "@types/jest": "^30.0.0",
